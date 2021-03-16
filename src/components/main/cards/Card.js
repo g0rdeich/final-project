@@ -16,7 +16,7 @@ const Card = ( {id, name, store} ) => {
             </div>
             <div className="card-buttons">
                 < CatchBtn id={id} store={store}/>
-                < InfoBtn />
+                < InfoBtn id={id} store={store}/>
             </div>
         </div>
     )

@@ -1,8 +1,10 @@
 import React from "react";
 
-const InfoBtn = () => {
+const InfoBtn = ( {id, store}) => {
     return(
-        <button className="btn btn-info">Go to profile</button>
+        <button className="btn btn-info"
+            value={id}
+            onClick={store.goToProfile}>Go to profile</button>
     )
 }
 

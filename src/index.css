@@ -88,3 +88,34 @@
 .caught {
     border-color: red;
 }
+
+.profiles-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-field {
+    width: 75vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-profile {
+    width: 45rem;
+    height: 40rem;
+}
+
+.card-profile .card-img {
+    width: 20rem;
+    height: 20rem;
+}
+
+.prev, .next {
+    width: 10vw;
+    height: 10vh;
+    background-color: green;
+}
