@@ -1,10 +1,17 @@
-import { CHANGE_PAGE, CATCH_POKEMON } from "./actions";
+import { CHANGE_PAGE_MAIN, CHANGE_PAGE_COLLECTION, CATCH_POKEMON } from "./actions";
 
-const changePage = (e) => {
+const changePageMain = (e) => {
     return {
-            type: CHANGE_PAGE,
+            type: CHANGE_PAGE_MAIN,
             value: parseInt(e.target.value),
         }
+}
+
+const changePageCollection = (e) => {
+    return {
+        type: CHANGE_PAGE_COLLECTION,
+        value: parseInt(e.target.value),
+    }
 }
 
 const catchPokemon = (e) => {
@@ -14,4 +21,4 @@ const catchPokemon = (e) => {
     }
 }
 
-export { changePage, catchPokemon };
+export { changePageMain, changePageCollection, catchPokemon };

@@ -19,7 +19,6 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
-    "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "typescript": "^4.2.3",
     "webpack-dev-server": "^3.11.2"
@@ -32,6 +31,7 @@
     "css-loader": "^5.1.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "react-router-dom": "^5.2.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.18",
     "webpack": "^5.25.0",

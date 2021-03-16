@@ -11,6 +11,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "public"),
         filename: "bundle.js",
+        // publicPath: "/",
     },
     module: {
         rules: [
@@ -39,6 +40,9 @@ module.exports = {
     },
     resolve: {
         extensions: ["*", ".js", ".jsx", ".ts", ".tsx"],
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     plugins: [
         htmlPlugin

@@ -1,11 +1,11 @@
 import React from "react";
-import Pagination from "./pagination/Pagination";
 import CardsField from "./cards/CardsField";
+import PaginationMain from "./pagination/PaginationMain";
 
 const Main = ( {store} ) => {
     return(
         <div className="main">
-            < Pagination store={store}/>
+            < PaginationMain store={store}/>
             < CardsField store={store}/>
         </div>
     )

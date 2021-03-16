@@ -5,7 +5,8 @@ import App from './App';
 import {Provider, connect} from 'react-redux';
 import {bindActionCreators, createStore} from "redux";
 import pageReducer from "./redux/reducer";
-import {catchPokemon, changePage} from "./redux/actionCreators";
+import {catchPokemon, changePageCollection, changePageMain} from "./redux/actionCreators";
+import {BrowserRouter as Router} from "react-router-dom";
 
 const store = createStore(pageReducer);
 
@@ -17,7 +18,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changePage: bindActionCreators(changePage, dispatch),
+        changePageMain: bindActionCreators(changePageMain, dispatch),
+        changePageCollection: bindActionCreators(changePageCollection, dispatch),
         catchPokemon: bindActionCreators(catchPokemon, dispatch),
     }
 }
@@ -25,9 +27,11 @@ const mapDispatchToProps = (dispatch) => {
 const Container = connect(mapStateToProps, mapDispatchToProps)(App);
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Container />
-    </Provider>,
+    <Router>
+        <Provider store={store}>
+            <Container />
+        </Provider>
+    </Router>,
     document.querySelector('#root')
 );
 

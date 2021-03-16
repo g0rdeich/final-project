@@ -1,12 +1,11 @@
 import React from "react";
 
 import Card from "./Card";
-import {useSelector} from "react-redux";
 
 const CardsField = ( {store} ) => {
     const pageArr = [];
     const cardsOnPage = store.cardsOnPage;
-    for (let i = cardsOnPage * (store.page - 1); i < cardsOnPage * (store.page); i++) {
+    for (let i = cardsOnPage * (store.paginationPageMain - 1); i < cardsOnPage * (store.paginationPageMain); i++) {
         pageArr.push(store.pokemons[i]);
     }
     return(
