@@ -31,7 +31,7 @@ const catchPokemon = (e) => {
 const goToProfile = (e) => {
     return {
         type: GO_TO_PROFILE,
-        value: parseInt(e.target.value)
+        value: parseInt(e.target.id),
     }
 }
 

@@ -14,7 +14,7 @@ const CardCollection = ({id, name, store} ) => {
                 <p> Name: {name}</p>
             </div>
             <div className="card-buttons">
-                < InfoBtn />
+                < InfoBtn id={id} store={store}/>
             </div>
         </div>
     )
