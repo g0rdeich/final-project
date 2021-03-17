@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightblue;
+    background-color: #93BDBF;
     cursor: default;
 }
 
@@ -40,7 +40,7 @@
 .navbar {
     width: 100vw;
     height: 10vh;
-    background-color: peachpuff;
+    background-color: #34666F;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +50,7 @@
     margin: 1rem;
     font-size: 2rem;
     text-decoration: none;
+    color: #FBE8D9;
 }
 
 .nav-link:hover {
@@ -57,7 +58,7 @@
 }
 
 .nav-link-active {
-    color: green;
+    color: peru;
 }
 
 .btn {
@@ -79,7 +80,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: lightblue;
+    background-color: #93BDBF;
 }
 
 .btn-pagination {
@@ -90,7 +91,7 @@
 }
 
 .btn-pagination-active {
-    background-color: red;
+    background-color: peru;
 }
 
 .cards-field {
@@ -100,7 +101,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: lightblue;
+    background-color: #93BDBF;
 }
 
 .card {
@@ -137,8 +138,22 @@
     width: 25%;
 }
 
+.btn-catch {
+    background-color: #F1D6BC;
+}
+
+.btn-catch:hover {
+    transform: scale(1.05);
+}
+
 .link-to-profile {
     text-decoration: none;
+    color: #3F3931;
+    font-weight: bold;
+}
+
+.link-to-profile:hover {
+    transform: scale(1.05);
 }
 
 .caught {
@@ -150,7 +165,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightblue;
+    background-color: #93BDBF;
 }
 
 .btn-random-profile {

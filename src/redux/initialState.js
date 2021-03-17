@@ -18,7 +18,7 @@ const initialState = {paginationPageMain: 1,
         },
     ],
     caughtPokemonIds: [],
-    cardsOnPage: 10,
+    cardsOnPage: 15,
     activeProfileId: 1,
     appStarted: false,
 }
