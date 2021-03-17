@@ -1,3 +1,8 @@
+Instruction:
+1. npm install
+2. npm run json
+3. npm start
+
 # Final project
 ### Deadline: 17.03
 Для выполнения этого ДЗ Вам понадобятся следующие npm-пакеты:
