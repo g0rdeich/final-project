@@ -10,7 +10,7 @@
     "json": "json-server --port 9999 --watch ./src/db.json"
   },
   "keywords": [],
-  "author": "",
+  "author": "Aleksandr Gordeev",
   "license": "ISC",
   "dependencies": {
     "@types/jest": "^26.0.20",

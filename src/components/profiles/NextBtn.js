@@ -2,7 +2,7 @@ import React from "react";
 
 const NextBtn = ( {store} ) => {
     return(
-        <button onClick={store.goToNextProfile}>→</button>
+        <button className="btn btn-next-profile" onClick={store.goToNextProfile}>→</button>
     )
 }
 

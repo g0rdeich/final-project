@@ -2,7 +2,7 @@ import React from "react";
 
 const PrevBtn = ( {store} ) => {
     return(
-        <button onClick={store.goToPrevProfile}>←</button>
+        <button className="btn btn-prev-profile" onClick={store.goToPrevProfile}>←</button>
     )
 }
 

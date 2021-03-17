@@ -3,7 +3,8 @@ import {Link} from "react-router-dom";
 
 const InfoBtn = ( {id, store}) => {
     return(
-        <Link id={id} to={store.pages[2].link} onClick={store.goToProfile}>Go to profile</Link>
+        <Link className="link-to-profile"
+              id={id} to={store.pages[2].link} onClick={store.goToProfile}>Go to profile</Link>
     )
 }
 

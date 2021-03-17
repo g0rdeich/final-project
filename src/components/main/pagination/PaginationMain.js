@@ -1,5 +1,7 @@
 import React from "react";
 import PaginationBtn from "./PaginationMainBtn";
+import PaginationMainPrevPageBtn from "./PaginationMainPrevPageBtn";
+import PaginationMainNextPageBtn from "./PaginationMainNextPageBtn";
 
 const PaginationMain = ( {store} ) => {
     const btnNumbers = [];
@@ -8,7 +10,9 @@ const PaginationMain = ( {store} ) => {
     }
     return(
         <div className="pagination pagination-main">
+            <PaginationMainPrevPageBtn store={store} />
             {btnNumbers.map(num => < PaginationBtn key={num.toString()} num={num} store={store}/>)}
+            <PaginationMainNextPageBtn store={store} />
         </div>
     )
 }

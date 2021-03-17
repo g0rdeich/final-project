@@ -1,5 +1,5 @@
 import React from "react";
-import InfoBtn from "./InfoBtn";
+import InfoBtnCollection from "./InfoBtnCollection";
 import {useSelector} from "react-redux";
 
 const CardCollection = ({id, name, store} ) => {
@@ -14,7 +14,7 @@ const CardCollection = ({id, name, store} ) => {
                 <p> Name: {name}</p>
             </div>
             <div className="card-buttons">
-                < InfoBtn id={id} store={store}/>
+                < InfoBtnCollection id={id} store={store}/>
             </div>
         </div>
     )

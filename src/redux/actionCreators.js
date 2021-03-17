@@ -5,7 +5,12 @@ import {
     GO_TO_PROFILE,
     GO_TO_PREV_PROFILE,
     GO_TO_NEXT_PROFILE,
-    START_APP, GO_TO_RANDOM_PROFILE
+    START_APP,
+    GO_TO_RANDOM_PROFILE,
+    GO_TO_PREV_PAGE_MAIN,
+    GO_TO_PREV_PAGE_COLLECTION,
+    GO_TO_NEXT_PAGE_MAIN,
+    GO_TO_NEXT_PAGE_COLLECTION
 } from "./actions";
 
 const changePageMain = (e) => {
@@ -61,5 +66,29 @@ const startApp = () => {
     }
 }
 
+const goToPrevPageMain = () => {
+    return {
+        type: GO_TO_PREV_PAGE_MAIN,
+    }
+}
+
+const goToNextPageMain = () => {
+    return {
+        type: GO_TO_NEXT_PAGE_MAIN,
+    }
+}
+
+const goToPrevPageCollection = () => {
+    return {
+        type: GO_TO_PREV_PAGE_COLLECTION,
+    }
+}
+
+const goToNextPageCollection = () => {
+    return {
+        type: GO_TO_NEXT_PAGE_COLLECTION,
+    }
+}
+
 export { changePageMain, changePageCollection, catchPokemon, goToProfile, goToPrevProfile, goToNextProfile, startApp,
-goToRandomProfile};
+goToRandomProfile, goToPrevPageMain, goToNextPageMain, goToPrevPageCollection, goToNextPageCollection};

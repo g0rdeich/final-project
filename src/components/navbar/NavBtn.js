@@ -3,9 +3,8 @@ import {NavLink} from "react-router-dom";
 
 const NavBtn = ( {name, link} ) => {
     return(
-        <div className="btn-navbar">
-            <NavLink exact activeClassName="btn-nav-active" to={link}>{name}
-            </NavLink></div>
+            <NavLink exact className="nav-link" activeClassName="nav-link nav-link-active" to={link}>{name}
+            </NavLink>
     )
 }
 
