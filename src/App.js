@@ -4,22 +4,24 @@ import Main from "./components/main/Main";
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import Collection from "./components/collection/Collection";
 import Profiles from "./components/profiles/Profiles";
+import StartPageModal from "./components/startPageModal/StartPageModal";
 
 const App = ( store )  => {
     return(
         <Router>
             <>
-                <Navbar />
+                {store.appStarted && <Navbar />}
+                {store.appStarted || <StartPageModal store={store} />}
                     <Switch>
                         <Redirect exact from="/" to={store.pages[0].link} />
                         <Route exact path={store.pages[0].link}>
-                            <Main store={store}/>
+                            {store.appStarted && <Main store={store}/>}
                         </Route>
                         <Route exact path={store.pages[1].link}>
-                            <Collection store={store}/>
+                            {store.appStarted && <Collection store={store}/>}
                         </Route>
                         <Route path={store.pages[2].link}>
-                            <Profiles store={store}/>
+                            {store.appStarted && <Profiles store={store}/>}
                         </Route>
                     </Switch>
             </>

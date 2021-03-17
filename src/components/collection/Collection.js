@@ -6,7 +6,8 @@ const Collection = ( {store} ) => {
     return(
         <div className="main">
             < PaginationCollection store={store}/>
-            < CardsFieldCollection store={store}/>
+            {store.caughtPokemonIds.length !== 0 ? < CardsFieldCollection store={store}/> :
+                <div>"You have no pokemons here yet"</div>}
         </div>
     )
 }

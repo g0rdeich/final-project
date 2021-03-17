@@ -14,6 +14,7 @@ const ProfileCard = ( {store} ) => {
                 <img className="card-img" src={path} alt={currentIdInfo.name}/>
                 <p> ID: {currentIdInfo.id}</p>
                 <p> Name: {currentIdInfo.name}</p>
+                <p> Caught: {currentIdInfo.captureDate || "You can catch this pokemon later"}</p>
             </div>
             <div className="card-buttons">
                 < CatchBtnProfile id={currentIdInfo.id} store={store}/>

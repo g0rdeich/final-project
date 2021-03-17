@@ -11,7 +11,7 @@ import {
     changePageMain,
     goToNextProfile,
     goToPrevProfile,
-    goToProfile
+    goToProfile, startApp
 } from "./redux/actionCreators";
 import {BrowserRouter as Router} from "react-router-dom";
 
@@ -31,6 +31,7 @@ const mapDispatchToProps = (dispatch) => {
         goToProfile: bindActionCreators(goToProfile, dispatch),
         goToPrevProfile: bindActionCreators(goToPrevProfile, dispatch),
         goToNextProfile: bindActionCreators(goToNextProfile, dispatch),
+        startApp: bindActionCreators(startApp, dispatch),
     }
 }
 

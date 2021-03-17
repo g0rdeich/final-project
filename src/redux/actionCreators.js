@@ -4,7 +4,8 @@ import {
     CATCH_POKEMON,
     GO_TO_PROFILE,
     GO_TO_PREV_PROFILE,
-    GO_TO_NEXT_PROFILE
+    GO_TO_NEXT_PROFILE,
+    START_APP
 } from "./actions";
 
 const changePageMain = (e) => {
@@ -25,6 +26,7 @@ const catchPokemon = (e) => {
     return {
         type: CATCH_POKEMON,
         value: parseInt(e.currentTarget.value),
+        date: new Date(),
     }
 }
 
@@ -47,4 +49,10 @@ const goToNextProfile = () => {
     }
 }
 
-export { changePageMain, changePageCollection, catchPokemon, goToProfile, goToPrevProfile, goToNextProfile };
+const startApp = () => {
+    return {
+        type: START_APP,
+    }
+}
+
+export { changePageMain, changePageCollection, catchPokemon, goToProfile, goToPrevProfile, goToNextProfile, startApp };

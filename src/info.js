@@ -2881,4 +2881,4 @@ const pokemons =  [
     }
 ]
 
-export {pokemons};
+// export {pokemons};
