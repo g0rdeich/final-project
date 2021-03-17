@@ -5,7 +5,7 @@ import {
     GO_TO_PROFILE,
     GO_TO_PREV_PROFILE,
     GO_TO_NEXT_PROFILE,
-    START_APP
+    START_APP, GO_TO_RANDOM_PROFILE
 } from "./actions";
 
 const changePageMain = (e) => {
@@ -49,10 +49,17 @@ const goToNextProfile = () => {
     }
 }
 
+const goToRandomProfile = () => {
+    return {
+        type: GO_TO_RANDOM_PROFILE
+    }
+}
+
 const startApp = () => {
     return {
         type: START_APP,
     }
 }
 
-export { changePageMain, changePageCollection, catchPokemon, goToProfile, goToPrevProfile, goToNextProfile, startApp };
+export { changePageMain, changePageCollection, catchPokemon, goToProfile, goToPrevProfile, goToNextProfile, startApp,
+goToRandomProfile};

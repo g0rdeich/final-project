@@ -5,10 +5,11 @@ import {
     GO_TO_PROFILE,
     GO_TO_PREV_PROFILE,
     GO_TO_NEXT_PROFILE,
-    START_APP
+    START_APP, GO_TO_RANDOM_PROFILE
 } from "./actions";
 import {initialState} from "./initialState";
 import addZero from "../helperFunctions/addZero";
+import getRandomInt from "../helperFunctions/getRandomInt";
 
 const pageReducer = (state = initialState, action) => {
     switch(action.type) {
@@ -20,14 +21,14 @@ const pageReducer = (state = initialState, action) => {
                 state.pokemons.map((item) => item.id === action.value ? {
                 ...item,
                 captureDate: `${addZero(action.date.getDate())}.${addZero(action.date.getMonth() + 1)}.${action.date.getFullYear()}`,
-            } : item)
-        }
-            // pokemons: [state.pokemons.slice(0, action.value - 1), state.pokemons[action.value - 1], state.pokemons.slice(action.value)]};
+            } : item)};
         case GO_TO_PROFILE: return {...state, activeProfileId: action.value};
         case GO_TO_PREV_PROFILE: return {...state,
             activeProfileId: state.activeProfileId === 1 ? state.pokemons.length : state.activeProfileId - 1};
         case GO_TO_NEXT_PROFILE: return {...state,
             activeProfileId: state.activeProfileId === state.pokemons.length ? 1 : state.activeProfileId + 1};
+        case GO_TO_RANDOM_PROFILE: return {...state,
+            activeProfileId: getRandomInt(1, state.pokemons.length)}
         case START_APP: return {...state, appStarted: true};
         default: return state;
         }

@@ -100,13 +100,14 @@
     width: 75vw;
     height: 90vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .card-profile {
     width: 45rem;
-    height: 40rem;
+    height: 35rem;
 }
 
 .card-profile .card-img {

@@ -17,7 +17,6 @@ const initialState = {paginationPageMain: 1,
             link: '/profiles',
         },
     ],
-    // activePage: '/',
     caughtPokemonIds: [],
     cardsOnPage: 10,
     activeProfileId: 1,
@@ -29,8 +28,16 @@ const addPokemons = async () => {
 
     const res = await fetch(uri);
     const pokemons = await res.json();
-    pokemons.forEach((pokemon) => pokemon.captureDate = 'You can catch this pokemon later (from state)');
+    const caughtPokemonsIds = [];
+    pokemons.forEach((pokemon) => {
+        if(!pokemon.captureDate) {
+            pokemon.captureDate = 'You can catch this pokemon now or later';
+        } else {
+            caughtPokemonsIds.push(pokemon.id)
+        }
+    });
     initialState.pokemons = pokemons;
+    initialState.caughtPokemonIds = caughtPokemonsIds;
 }
 
 addPokemons();

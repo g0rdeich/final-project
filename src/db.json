@@ -2,7 +2,8 @@
   "pokemons": [
     {
       "name": "bulbasaur",
-      "id": 1
+      "id": 1,
+      "captureDate": "01.01.2021"
     },
     {
       "name": "ivysaur",
